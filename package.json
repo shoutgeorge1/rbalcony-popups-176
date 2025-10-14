@@ -1,0 +1,25 @@
+{
+  "name": "drbalcony-webinar-popups",
+  "version": "1.0.0",
+  "description": "DrBalcony Webinar Pop-ups - 3 Optimized Conversion Variants",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "chmod +x deploy.sh && ./deploy.sh",
+    "vercel": "vercel --prod",
+    "build": "echo 'Static HTML files - no build needed'",
+    "start": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "webinar",
+    "popup",
+    "conversion",
+    "drbalcony",
+    "california",
+    "balcony-inspection"
+  ],
+  "author": "DrBalcony",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}

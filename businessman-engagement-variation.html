@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrBalcony Webinar Pop-up - Businessman Engagement Variation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .engagement-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .cta-hover {
+            transition: all 0.3s ease;
+        }
+        .cta-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(242, 101, 34, 0.4);
+        }
+        .wow-badge {
+            background: linear-gradient(135deg, #F26522 0%, #FF6B35 100%);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .speech-bubble {
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 30px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid white;
+        }
+        .success-badge {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Businessman Engagement Pop-up Variation -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="relative w-full max-w-4xl">
+            <div class="bg-white rounded-2xl engagement-shadow overflow-hidden">
+                <div class="grid md:grid-cols-2 min-h-96">
+                    <!-- Left Side - Businessman Image -->
+                    <div class="relative bg-cover bg-center bg-no-repeat" 
+                         style="background-image: url('https://drbalcony.com/wp-content/uploads/2025/09/78084cff-9af6-4d56-af20-d331bacd6a03-copy-Medium-min-e1756998447613.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-transparent"></div>
+                        
+                        <!-- Close Button -->
+                        <button class="absolute top-4 left-4 text-white hover:text-orange-300 transition-colors z-10 bg-black/20 rounded-full p-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                        
+                        <!-- Success Badge -->
+                        <div class="absolute top-1/2 left-4 transform -translate-y-1/2">
+                            <div class="success-badge text-white px-4 py-2 rounded-full text-sm font-bold">
+                                SUCCESS!
+                            </div>
+                        </div>
+                        
+                        <!-- Speech Bubble - Variation -->
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+                                <div class="text-blue-900 font-bold text-base mb-2">"Saved us $50K+ in fines!"</div>
+                                <div class="text-gray-600 text-sm font-medium">- Property Manager, Los Angeles</div>
+                                <div class="mt-2">
+                                    <a href="https://drbalcony.com/webinar/" class="text-orange-500 text-sm font-bold hover:text-orange-600">Join Free Webinar →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side - Content -->
+                    <div class="p-8 flex flex-col justify-center">
+                        <!-- Logo -->
+                        <div class="mb-6">
+                            <div class="text-blue-900 text-2xl font-bold mb-1">DrBalcony</div>
+                            <div class="text-orange-500 text-sm font-medium tracking-wider">FREE WEBINAR</div>
+                        </div>
+                        
+                        <!-- Headline - Variation -->
+                        <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4 leading-tight">
+                            Join 5,000+ Property Managers<br>
+                            <span class="text-orange-500">Who Stay Compliant</span>
+                        </h1>
+                        
+                        <!-- Subtext - Variation -->
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            Don't let compliance catch you off guard. Get expert guidance from California's leading balcony inspection specialists.
+                        </p>
+                        
+                        <!-- Success Elements -->
+                        <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-6">
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <div>
+                                    <div class="text-green-800 font-bold text-sm">PROVEN SUCCESS: 100% Compliance Rate</div>
+                                    <div class="text-green-700 text-sm">Join thousands who've avoided costly fines</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Features - Variation -->
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 font-medium">Step-by-step compliance roadmap</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 font-medium">Free compliance checklists & templates</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 font-medium">Direct access to certified inspectors</span>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Button - Variation -->
+                        <a href="https://drbalcony.com/webinar/" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg cta-hover mb-4 inline-block text-center">
+                            Join Successful Property Managers
+                        </a>
+                        
+                        <!-- Schedule & Trust -->
+                        <div class="flex items-center justify-between text-sm">
+                            <div class="text-blue-900 font-bold">DAILY AT 11AM PST</div>
+                            <div class="flex items-center text-gray-500">
+                                <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>100% Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
