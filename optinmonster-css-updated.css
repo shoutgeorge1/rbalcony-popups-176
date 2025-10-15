@@ -1,0 +1,48 @@
+/* OptinMonster CSS - Copy this into the CSS editor */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Base styles */
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Hover effects for buttons */
+a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .text-4xl {
+        font-size: 2rem !important;
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem !important;
+    }
+    
+    .px-8 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .py-8 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    /* Make grid single column on mobile */
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Adjust popup height on mobile */
+    .min-h-96 {
+        min-height: auto !important;
+    }
+}
+

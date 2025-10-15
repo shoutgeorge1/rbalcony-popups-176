@@ -1,0 +1,96 @@
+/* OptinMonster CSS - Copy this into the CSS editor */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Base styles */
+body { 
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Businessman Engagement Styles */
+.engagement-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.cta-hover {
+    transition: all 0.3s ease;
+}
+
+.cta-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(242, 101, 34, 0.4);
+}
+
+.wow-badge {
+    background: linear-gradient(135deg, #F26522 0%, #FF6B35 100%);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.speech-bubble {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+}
+
+.success-badge {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+/* Card Blur Styles */
+.card-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.trust-badge {
+    background: linear-gradient(135deg, #002D62 0%, #F26522 100%);
+}
+
+.feature-highlight {
+    background: linear-gradient(135deg, #F26522 0%, #FF6B35 100%);
+}
+
+/* Hero Overlay Styles */
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(0, 45, 98, 0.95) 0%, rgba(242, 101, 34, 0.9) 100%);
+}
+
+/* Responsive adjustments for OptinMonster */
+@media (max-width: 768px) {
+    .text-4xl {
+        font-size: 2rem;
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .px-8 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .py-8 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
