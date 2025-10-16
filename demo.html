@@ -7,73 +7,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .popup-container { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 20px;
-            background: linear-gradient(135deg, #f5f6f7 0%, #e8f4f8 100%);
-            min-height: 100vh;
-        }
-        .popup-item {
-            margin-bottom: 40px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .popup-header {
-            background: linear-gradient(135deg, #002d62 0%, #f26522 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .popup-content {
-            padding: 20px;
-        }
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-            border-radius: 8px;
-        }
-        .demo-title {
-            text-align: center;
-            color: #002d62;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-        .demo-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-            font-size: 1.2rem;
-        }
-        .status-badge {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .status-fixed { background: #dcfce7; color: #166534; }
-        .status-new { background: #dbeafe; color: #1e40af; }
-        .status-debug { background: #fef3c7; color: #92400e; }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .popup-container { max-width: 1200px; margin: 0 auto; }
+        .popup-item { margin-bottom: 40px; border: 1px solid #ddd; }
+        .popup-header { background: #f5f5f5; padding: 15px; border-bottom: 1px solid #ddd; }
+        .popup-content { padding: 20px; }
+        iframe { width: 100%; height: 700px; border: none; }
+        h1 { font-size: 24px; margin-bottom: 20px; }
+        h2 { font-size: 18px; margin: 0 0 10px 0; }
+        p { margin: 0 0 10px 0; color: #666; }
+        .status { font-size: 12px; color: #666; }
     </style>
 </head>
 <body>
     <div class="popup-container">
-        <h1 class="demo-title">DrBalcony Popups - Fixed Versions</h1>
-        <p class="demo-subtitle">Conversion tracking fixed, mobile optimized, duplicate close buttons removed</p>
+        <h1>DrBalcony Popups - Fixed Versions</h1>
+        <p>Conversion tracking fixed, mobile optimized, duplicate close buttons removed</p>
         
         <!-- Original Businessman Engagement - FIXED -->
         <div class="popup-item">
             <div class="popup-header">
                 <h2>Businessman Engagement - FIXED</h2>
                 <p>Join 5,000+ Property Managers - Mobile optimized with conversion tracking</p>
-                <span class="status-badge status-fixed">✅ FIXED - Conversion tracking added</span>
+                <div class="status">FIXED - Conversion tracking added</div>
             </div>
             <div class="popup-content">
                 <iframe src="businessman-engagement-fixed.html"></iframe>
@@ -85,7 +41,7 @@
             <div class="popup-header">
                 <h2>DrBalcony Certified Experts - FIXED</h2>
                 <p>California's #1 Balcony Inspection Experts - Mobile optimized</p>
-                <span class="status-badge status-fixed">✅ FIXED - Mobile display improved</span>
+                <div class="status">FIXED - Mobile display improved</div>
             </div>
             <div class="popup-content">
                 <iframe src="card-blur-fixed.html"></iframe>
@@ -97,7 +53,7 @@
             <div class="popup-header">
                 <h2>2025 California Law Updates - FIXED</h2>
                 <p>Stay Compliant with California's New Balcony Laws - Button clickability fixed</p>
-                <span class="status-badge status-fixed">✅ FIXED - Button clickability resolved</span>
+                <div class="status">FIXED - Button clickability resolved</div>
             </div>
             <div class="popup-content">
                 <iframe src="hero-overlay-fixed.html"></iframe>
@@ -109,7 +65,7 @@
             <div class="popup-header">
                 <h2>California Law Low Intent - NEW</h2>
                 <p>SB 721 / SB 326 - New Regulations & Deadlines - Low pressure approach</p>
-                <span class="status-badge status-new">🆕 NEW - Low intent variation</span>
+                <div class="status">NEW - Low intent variation</div>
             </div>
             <div class="popup-content">
                 <iframe src="california-law-low-intent.html"></iframe>
@@ -121,7 +77,7 @@
             <div class="popup-header">
                 <h2>Debug Conversion Tracking</h2>
                 <p>Test different tracking methods to troubleshoot conversion issues</p>
-                <span class="status-badge status-debug">🔧 DEBUG - For troubleshooting</span>
+                <div class="status">DEBUG - For troubleshooting</div>
             </div>
             <div class="popup-content">
                 <iframe src="debug-conversion-tracking.html"></iframe>
@@ -129,14 +85,14 @@
         </div>
 
         <!-- Summary -->
-        <div style="background: white; border-radius: 12px; padding: 2rem; margin-top: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-            <h2 style="color: #002d62; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Summary of Fixes</h2>
-            <ul style="color: #374151; line-height: 1.8;">
-                <li><strong>✅ Conversion Tracking:</strong> Added proper OptinMonster tracking to all buttons</li>
-                <li><strong>✅ Mobile Optimization:</strong> Fixed button clickability and text sizing for mobile</li>
-                <li><strong>✅ Duplicate Close Buttons:</strong> Removed custom X buttons (OptinMonster handles this)</li>
-                <li><strong>✅ Visual Improvements:</strong> Enhanced gradients, fonts, and mobile responsiveness</li>
-                <li><strong>✅ New Variation:</strong> Created low-intent California Law popup as requested</li>
+        <div style="border: 1px solid #ddd; padding: 20px; margin-top: 20px;">
+            <h2>Summary of Fixes</h2>
+            <ul>
+                <li>Conversion Tracking: Added proper OptinMonster tracking to all buttons</li>
+                <li>Mobile Optimization: Fixed button clickability and text sizing for mobile</li>
+                <li>Duplicate Close Buttons: Removed custom X buttons (OptinMonster handles this)</li>
+                <li>Visual Improvements: Enhanced gradients, fonts, and mobile responsiveness</li>
+                <li>New Variation: Created low-intent California Law popup as requested</li>
             </ul>
         </div>
     </div>
