@@ -1,0 +1,85 @@
+<!-- Hero Overlay Pop-up - FIXED VERSION for OptinMonster -->
+<div style="position: relative; width: 100%; max-width: 56rem; height: 24rem; border-radius: 1rem; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); font-family: 'Poppins', sans-serif;">
+    <!-- Background Image -->
+    <div style="position: absolute; inset: 0; background-image: url('https://drbalcony.com/wp-content/uploads/2025/09/daily-webinar-drb.jpg.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    
+    <!-- Gradient Overlay -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 45, 98, 0.95) 0%, rgba(242, 101, 34, 0.9) 100%);"></div>
+    
+    <!-- Content -->
+    <div style="position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem;">
+        <!-- Logo/Brand -->
+        <div style="margin-bottom: 1.5rem;">
+            <div style="color: white; font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif;">DrBalcony</div>
+            <div style="color: #fbbf24; font-size: 1.125rem; font-weight: bold; letter-spacing: 0.1em; font-family: 'Poppins', sans-serif;">FREE WEBINAR</div>
+        </div>
+        
+        <!-- Main Headline -->
+        <h1 style="color: white; font-size: 3rem; font-weight: bold; margin-bottom: 1rem; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-family: 'Poppins', sans-serif;">
+            2025 CALIFORNIA<br>
+            <span style="color: #f26522;">LAW UPDATES</span>
+        </h1>
+        
+        <!-- Subtext -->
+        <p style="color: white; font-size: 1.25rem; margin-bottom: 2rem; max-width: 32rem; line-height: 1.6; font-weight: 500; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); font-family: 'Poppins', sans-serif;">
+            Stay Compliant — Join Our Free Webinar
+        </p>
+        
+        <!-- CTA Button - FIXED with conversion tracking and mobile optimization -->
+        <a href="https://drbalcony.com/webinar/" 
+           onclick="if(typeof window.om !== 'undefined') { window.om('track', 'conversion'); }"
+           style="background: #f26522; color: white; font-weight: bold; padding: 1rem 2rem; border-radius: 0.5rem; font-size: 1.125rem; text-decoration: none; display: inline-block; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; font-family: 'Poppins', sans-serif; min-height: 3.5rem; min-width: 12rem; display: flex; align-items: center; justify-content: center;">
+            Reserve Your Spot
+        </a>
+        
+        <!-- Schedule Info -->
+        <div style="margin-top: 1.5rem; color: white; font-size: 0.875rem; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-family: 'Poppins', sans-serif;">
+            <span>DAILY AT 11AM PST</span>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Responsive Styles -->
+<style>
+@media (max-width: 768px) {
+    .popup-container {
+        height: 20rem !important;
+        max-width: 100% !important;
+    }
+    
+    .popup-container h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .popup-container p {
+        font-size: 1.125rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .popup-container a {
+        min-height: 3.5rem !important;
+        font-size: 1rem !important;
+        padding: 1.25rem 1.5rem !important;
+        min-width: 10rem !important;
+    }
+    
+    .popup-container > div:nth-child(3) {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-container {
+        height: 18rem !important;
+    }
+    
+    .popup-container h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    .popup-container p {
+        font-size: 1rem !important;
+    }
+}
+</style>

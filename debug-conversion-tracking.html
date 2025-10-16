@@ -1,0 +1,162 @@
+<!-- DEBUG VERSION - Test Conversion Tracking -->
+<div style="position: relative; width: 100%; max-width: 40rem; margin: 0 auto; font-family: 'Poppins', sans-serif;">
+    <div style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); overflow: hidden; border: 2px solid #e2e8f0;">
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #002d62 0%, #1e3a8a 50%, #f26522 100%); padding: 2rem; text-align: center;">
+            <div style="color: white; font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem;">DEBUG CONVERSION TRACKING</div>
+            <div style="color: #fbbf24; font-size: 1rem; font-weight: 600;">Test Different Tracking Methods</div>
+        </div>
+        
+        <!-- Main Content -->
+        <div style="padding: 2.5rem; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);">
+            <h1 style="font-size: 2rem; font-weight: 900; color: #111827; margin-bottom: 1.5rem; text-align: center;">
+                Test Conversion Tracking
+            </h1>
+            
+            <!-- Test Buttons -->
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem;">
+                
+                <!-- Method 1: Standard OptinMonster -->
+                <button onclick="
+                    console.log('Method 1: Standard OptinMonster tracking');
+                    if(typeof window.om !== 'undefined') { 
+                        window.om('track', 'conversion'); 
+                        console.log('OptinMonster tracking fired');
+                    } else {
+                        console.log('OptinMonster not available');
+                    }
+                    alert('Method 1: Standard OptinMonster tracking fired');
+                " style="background: linear-gradient(135deg, #002d62 0%, #1e3a8a 100%); color: white; font-weight: 700; padding: 1rem 2rem; border-radius: 0.75rem; font-size: 1rem; border: none; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    Method 1: Standard OptinMonster
+                </button>
+                
+                <!-- Method 2: Google Analytics -->
+                <button onclick="
+                    console.log('Method 2: Google Analytics tracking');
+                    if(typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                            'value': 1.0,
+                            'currency': 'USD'
+                        });
+                        console.log('Google Analytics tracking fired');
+                    } else {
+                        console.log('Google Analytics not available');
+                    }
+                    alert('Method 2: Google Analytics tracking fired');
+                " style="background: linear-gradient(135deg, #f26522 0%, #ea580c 100%); color: white; font-weight: 700; padding: 1rem 2rem; border-radius: 0.75rem; font-size: 1rem; border: none; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    Method 2: Google Analytics
+                </button>
+                
+                <!-- Method 3: Facebook Pixel -->
+                <button onclick="
+                    console.log('Method 3: Facebook Pixel tracking');
+                    if(typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead');
+                        console.log('Facebook Pixel tracking fired');
+                    } else {
+                        console.log('Facebook Pixel not available');
+                    }
+                    alert('Method 3: Facebook Pixel tracking fired');
+                " style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; font-weight: 700; padding: 1rem 2rem; border-radius: 0.75rem; font-size: 1rem; border: none; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    Method 3: Facebook Pixel
+                </button>
+                
+                <!-- Method 4: Custom Event -->
+                <button onclick="
+                    console.log('Method 4: Custom event tracking');
+                    // Try multiple tracking methods
+                    if(typeof window.om !== 'undefined') { 
+                        window.om('track', 'conversion'); 
+                    }
+                    if(typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'event_category': 'popup',
+                            'event_label': 'button_click'
+                        });
+                    }
+                    if(typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead');
+                    }
+                    // Custom event
+                    window.dispatchEvent(new CustomEvent('popupConversion', {detail: {source: 'button_click'}}));
+                    console.log('All tracking methods fired');
+                    alert('Method 4: All tracking methods fired');
+                " style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; font-weight: 700; padding: 1rem 2rem; border-radius: 0.75rem; font-size: 1rem; border: none; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    Method 4: All Methods
+                </button>
+                
+            </div>
+            
+            <!-- Debug Info -->
+            <div style="background: #f3f4f6; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 1.5rem;">
+                <h3 style="color: #374151; font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem;">Debug Information:</h3>
+                <div style="color: #6b7280; font-size: 0.875rem; line-height: 1.6;">
+                    <div><strong>OptinMonster:</strong> <span id="om-status">Checking...</span></div>
+                    <div><strong>Google Analytics:</strong> <span id="ga-status">Checking...</span></div>
+                    <div><strong>Facebook Pixel:</strong> <span id="fb-status">Checking...</span></div>
+                    <div><strong>Window Object:</strong> <span id="window-status">Checking...</span></div>
+                </div>
+            </div>
+            
+            <!-- Instructions -->
+            <div style="background: #fef3c7; border: 2px solid #f59e0b; padding: 1.5rem; border-radius: 0.75rem;">
+                <h3 style="color: #92400e; font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem;">Instructions:</h3>
+                <ol style="color: #b45309; font-size: 0.875rem; line-height: 1.6; margin-left: 1.5rem;">
+                    <li>Click each button above to test different tracking methods</li>
+                    <li>Check your browser console (F12) for any error messages</li>
+                    <li>Check your OptinMonster dashboard for conversion data</li>
+                    <li>Look for any tracking pixels or scripts in the page source</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Debug script to check what tracking is available
+document.addEventListener('DOMContentLoaded', function() {
+    // Check OptinMonster
+    const omStatus = document.getElementById('om-status');
+    if (typeof window.om !== 'undefined') {
+        omStatus.textContent = 'Available';
+        omStatus.style.color = '#10b981';
+    } else {
+        omStatus.textContent = 'Not Available';
+        omStatus.style.color = '#ef4444';
+    }
+    
+    // Check Google Analytics
+    const gaStatus = document.getElementById('ga-status');
+    if (typeof gtag !== 'undefined') {
+        gaStatus.textContent = 'Available';
+        gaStatus.style.color = '#10b981';
+    } else {
+        gaStatus.textContent = 'Not Available';
+        gaStatus.style.color = '#ef4444';
+    }
+    
+    // Check Facebook Pixel
+    const fbStatus = document.getElementById('fb-status');
+    if (typeof fbq !== 'undefined') {
+        fbStatus.textContent = 'Available';
+        fbStatus.style.color = '#10b981';
+    } else {
+        fbStatus.textContent = 'Not Available';
+        fbStatus.style.color = '#ef4444';
+    }
+    
+    // Check Window Object
+    const windowStatus = document.getElementById('window-status');
+    windowStatus.textContent = 'Available';
+    windowStatus.style.color = '#10b981';
+    
+    // Log all available tracking methods
+    console.log('=== TRACKING DEBUG INFO ===');
+    console.log('OptinMonster (window.om):', typeof window.om !== 'undefined');
+    console.log('Google Analytics (gtag):', typeof gtag !== 'undefined');
+    console.log('Facebook Pixel (fbq):', typeof fbq !== 'undefined');
+    console.log('All window properties:', Object.keys(window).filter(key => key.includes('om') || key.includes('gtag') || key.includes('fbq')));
+});
+</script>
+

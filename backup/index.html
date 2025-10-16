@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balcony Pop-ups Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Balcony Pop-ups Collection</h1>
+            <p>Interactive pop-up examples for balcony-related content</p>
+        </header>
+
+        <main>
+            <section class="popup-section">
+                <h2>Modal Pop-ups</h2>
+                <p>Full-screen overlay modals for detailed information</p>
+                <button class="btn btn-primary" onclick="openModal('costModal')">
+                    Show Cost Calculator
+                </button>
+                <button class="btn btn-secondary" onclick="openModal('inspectionModal')">
+                    Schedule Inspection
+                </button>
+            </section>
+
+            <section class="popup-section">
+                <h2>Tooltip Pop-ups</h2>
+                <p>Hover-triggered information boxes</p>
+                <div class="tooltip-demo">
+                    <span class="tooltip-trigger" data-tooltip="Average cost: $2,000-$5,000">
+                        Balcony Repair Cost
+                    </span>
+                    <span class="tooltip-trigger" data-tooltip="Required for structural changes">
+                        Permit Requirements
+                    </span>
+                </div>
+            </section>
+
+            <section class="popup-section">
+                <h2>Notification Pop-ups</h2>
+                <p>Toast-style notifications</p>
+                <button class="btn btn-info" onclick="showNotification('Quote request sent!', 'success')">
+                    Request Quote
+                </button>
+                <button class="btn btn-warning" onclick="showNotification('Inspection scheduled', 'info')">
+                    Schedule Inspection
+                </button>
+            </section>
+
+            <section class="popup-section">
+                <h2>Dropdown Pop-ups</h2>
+                <p>Menu-style dropdowns</p>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown('servicesDropdown')">
+                        Services <span class="arrow">▼</span>
+                    </button>
+                    <div id="servicesDropdown" class="dropdown-content">
+                        <a href="#" onclick="selectService('Inspection')">Inspection</a>
+                        <a href="#" onclick="selectService('Repair')">Repair</a>
+                        <a href="#" onclick="selectService('Replacement')">Replacement</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Pop-ups -->
+    <div id="costModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('costModal')">&times;</span>
+            <h3>Balcony Repair Cost Calculator</h3>
+            <div class="calculator">
+                <label for="balconySize">Balcony Size (sq ft):</label>
+                <input type="number" id="balconySize" placeholder="Enter size">
+                
+                <label for="repairType">Repair Type:</label>
+                <select id="repairType">
+                    <option value="minor">Minor Repair</option>
+                    <option value="major">Major Repair</option>
+                    <option value="replacement">Full Replacement</option>
+                </select>
+                
+                <button onclick="calculateCost()">Calculate Cost</button>
+                <div id="costResult" class="cost-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="inspectionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('inspectionModal')">&times;</span>
+            <h3>Schedule Inspection</h3>
+            <form class="inspection-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+                
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" required>
+                
+                <button type="submit">Schedule Inspection</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
